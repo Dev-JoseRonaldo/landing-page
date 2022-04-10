@@ -40,15 +40,14 @@
   </header>
 
   <main>
-    <section class="banner">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <section id="banner">
+      <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
         <div class="carousel-inner">
@@ -70,7 +69,7 @@
             <div class="carousel-caption d-none d-md-block">
               <h1>DESIGN IS ABOUT <span>COMMUNICATION</span> </h1>
               <p>CALL US: +00 0 1234 5678</p>
-              <a href="#">GET IN TOUCH!</a>
+              <a class="button" href="#">GET IN TOUCH!</a>
             </div>
           </div>
 
@@ -86,10 +85,82 @@
           </div>
         </div>
       </div>
-      <div class="phone">
+      <a href="#" class="phone">
         <i class="fa-solid fa-phone-volume"></i>
+      </a>
+    </section>
+
+    <section id="about-us">
+      <div class="title-box">
+        <h2>ABOUT US</h2>
+        <p>WHO WE ARE?</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="content-title">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ut harum exercitationem in minima
+                quibusdam! Architecto eius modi, fuga excepturi facilis maiores, neque, totam facere ab hic quae quod
+                quasi?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur excepturi quod numquam nulla soluta
+                necessitatibus laborum unde, dignissimos nobis provident perferendis voluptates illo aspernatur dolorum
+                vero
+                omnis autem sequi consequatur?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+                quaerat
+              </p>
+              <a class="button" href="#">LEARN MORE</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/4VR-6AS0-l4?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section id="services">
+      <div class="title-box">
+        <h2>SERVICES</h2>
+        <p>SERVICES THAT WE PROVIDE</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col">
+            <i class="fa-brands fa-affiliatetheme"></i>
+            <h3>HIGH QUALITY DESIGN</h3>
+            <p>Lorem ipsum dolor, sit adipisicing elit. Optio eos provident.</p>
+          </div>
+
+          <div class="col">
+            <i class="fa-regular fa-star"></i>
+            <h3>MODERN DESIGN</h3>
+            <p>Lorem ipsum dolor, sit adipisicing elit. Optio eos provident.</p>
+          </div>
+
+          <div class="col">
+            <i class="fa-regular fa-clock"></i>
+            <h3>REGULAR UPDATES</h3>
+            <p>Lorem ipsum dolor, sit adipisicing elit. Optio eos provident.</p>
+          </div>
+
+          <div class="col">
+            <i class="fa-regular fa-comment-dots"></i>
+            <h3>FAST AND FREE SUPPORT</h3>
+            <p>Lorem ipsum dolor, sit adipisicing elit. Optio eos provident.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Separate Popper and Bootstrap JS -->
