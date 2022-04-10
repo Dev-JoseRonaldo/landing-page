@@ -4,6 +4,7 @@
   --black: #080808;
   --primary-color: #B68B59;
   --hover-color: #969696;
+  --text-white: #ffffff;
 
   --primary-font: 'Montserrat', sans-serif;
 
@@ -18,6 +19,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -57,7 +59,7 @@ header .content-header nav ul {
 
 header .content-header nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--text-white);
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -71,4 +73,106 @@ header .content-header nav ul li.active a {
   border-top: 5px solid var(--black);
   border-bottom: 5px solid var(--primary-color);
   color: var(--hover-color);
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-item {
+  height: calc(100vh - 100px);
+}
+
+main .banner .carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.9;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
+
+#carouselExampleCaptions .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+#carouselExampleCaptions .carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: var(--primary-color);
+  margin: 0 5px;
+}
+
+.carousel-item .carousel-caption {
+  position: absolute;
+  top: calc(100vh/4);
+  height: 0;
+  padding: 0;
+  z-index: 20;
+}
+
+.carousel-item .carousel-caption h1 {
+  display: block;
+  color: var(--text-white);
+  font-size: 58px;
+  font-weight: 700;
+
+}
+
+.carousel-item .carousel-caption h1 span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.carousel-item .carousel-caption p {
+  color: var(--text-white);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.carousel-item .carousel-caption a {
+  text-decoration: none;
+  color: var(--text-white);
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  padding: 15px 40px;
+  border-radius: 40px;
+}
+
+.banner {
+  position: relative;
+}
+
+main .phone {
+  position: absolute;
+  bottom: -15px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+
+}
+
+main .phone i {
+  color: var(--text-white);
+  transform: rotate(-45deg);
 }
