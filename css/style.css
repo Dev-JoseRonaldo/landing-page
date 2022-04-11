@@ -8,6 +8,7 @@
   --text-grey: #bebebe;
   --text-services: #585858;
   --division-services: #222222;
+  --filter-bg: #ededed;
 
   --primary-font: 'Montserrat', sans-serif;
 
@@ -203,10 +204,13 @@ main #about-us .title-box h2 {
   font-weight: 700;
 }
 
-main #about-us .title-box p, main #services .title-box p {
+main #about-us .title-box p,
+main #services .title-box p,
+main #our-projects .title-box p {
   color: var(--text-grey);
   font-size: 14px;
   font-weight: 700;
+  margin-bottom: 40px;
 }
 
 main #about-us .row {
@@ -225,7 +229,7 @@ main #about-us .row iframe {
   color: var(--text-white);
 }
 
-/*** ABOUT US ***/
+/*** SERVICES ***/
 
 main #services {
   background-color: var(--black);
@@ -236,10 +240,6 @@ main #services {
 main #services .title-box h2 {
   font-size: 36px;
   font-weight: 700;
-}
-
-main #services .title-box p {
-  margin-bottom: 60px;
 }
 
 #services .row .col {
@@ -272,4 +272,103 @@ main #services .title-box p {
   font-size: 12px;
   font-weight: 400;
   color: var(--text-services);
+}
+
+/*** SERVICES ***/
+
+main #our-projects .filter {
+  border: 1px solid var(--text-grey);
+  background-color: var(--filter-bg);
+  border-radius: 40px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+main #our-projects .filter ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+main #our-projects .filter ul li {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  border-top: 3px solid var(--filter-bg);
+  border-bottom: 3px solid var(--filter-bg);
+}
+
+main #our-projects .filter ul li:hover,
+main #our-projects .filter ul li.active {
+  border-top: 3px solid var(--filter-bg);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+main #our-projects .filter ul li:nth-child(n+2) {
+  border-left: 1px solid var(--text-grey);
+}
+
+
+main #our-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main #our-projects .images {
+  width: 200px;
+  height: 130px;
+}
+
+main #our-projects .img-description {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  color: var(--text-white);
+  background-color: var(--black);
+  opacity: 0.7;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main #our-projects .images:hover .img-description {
+  display: block;
+}
+
+main #our-projects .img-description h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+main #our-projects .img-description p {
+  font-size: 10px;
+}
+
+main #our-projects img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.row>* {
+  padding-top: calc(var(--bs-gutter-x) * .5);
+  padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+
+main #our-projects .row {
+  margin-bottom: 20px;
+}
+
+main #our-projects {
+  color: var(--black);
+  padding: 60px 0;
+}
+
+main #our-projects .title-box h2 {
+  font-size: 36px;
+  font-weight: 700;
 }
