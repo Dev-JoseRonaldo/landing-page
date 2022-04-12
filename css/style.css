@@ -206,7 +206,8 @@ main #about-us .title-box h2 {
 
 main #about-us .title-box p,
 main #services .title-box p,
-main #our-projects .title-box p {
+main #our-projects .title-box p,
+main #our-team .title-box p {
   color: var(--text-grey);
   font-size: 14px;
   font-weight: 700;
@@ -237,7 +238,9 @@ main #services {
   padding: 60px 150px;
 }
 
-main #services .title-box h2 {
+main #services .title-box h2,
+main #our-team .title-box h2 {
+  color: var(--text-white);
   font-size: 36px;
   font-weight: 700;
 }
@@ -274,7 +277,7 @@ main #services .title-box h2 {
   color: var(--text-services);
 }
 
-/*** SERVICES ***/
+/*** OUR PROJECTS ***/
 
 main #our-projects .filter {
   border: 1px solid var(--text-grey);
@@ -317,8 +320,9 @@ main #our-projects {
 }
 
 main #our-projects .images {
-  width: 200px;
-  height: 130px;
+  position: relative;
+  width: 100%;
+  height: 200px;
 }
 
 main #our-projects .img-description {
@@ -332,16 +336,19 @@ main #our-projects .img-description {
   opacity: 0.7;
   overflow: hidden;
   cursor: pointer;
+  padding: 0 20px;
 }
 
 main #our-projects .images:hover .img-description {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 main #our-projects .img-description h4 {
   font-size: 16px;
   font-weight: 600;
-  margin-top: 30px;
 }
 
 main #our-projects .img-description p {
@@ -371,4 +378,107 @@ main #our-projects {
 main #our-projects .title-box h2 {
   font-size: 36px;
   font-weight: 700;
+}
+
+/*
+@media (min-width: 1200px) {
+  #our-projects .container, #our-projects .container-lg, #our-projects .container-md, #our-projects .container-sm, #our-projects .container-xl {
+    max-width: 960px;
+  }
+
+
+}
+*/
+
+/*** OUR TEAM ***/
+
+main #our-team {
+  position: relative;
+  height: 100vh;
+  background-color: var(--black);
+  padding: 60px 0;
+}
+
+main #our-team::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 0;
+  background-image: url(https://source.unsplash.com/random/?city);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.content-area .content {
+  background-color: var(--filter-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+}
+
+.content-area .content img {
+  clip-path: circle();
+  margin-bottom: 40px;
+}
+
+.content-area .content p {
+  margin-bottom: 40px;
+}
+
+.content-area .content .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.content-area .content .socials li {
+  list-style: none;
+}
+
+.content-area .content .socials li a {
+  text-decoration: none;
+}
+
+.content-area .content .socials i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  clip-path: circle();
+  background-color: var(--hover-color);
+  font-size: 16px;
+  color: var(--text-white);
+}
+
+.content-area .content .socials i:hover {
+  background-color: var(--primary-color);
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 3%;
+}
+
+#slider .owl-dots button.owl-dot {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 2px solid var(--primary-color);
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+#slider .owl-dots .owl-dot.active {
+  border: none;
+  background-color: var(--primary-color);
 }
